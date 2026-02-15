@@ -1,27 +1,31 @@
 # FastAPI Sharing
 
-A FastAPI application for sharing files and data.
+## API Documentation
 
-## Features
+### Endpoints
 
-- File sharing API
-- RESTful endpoints
-- Data validation with Pydantic
+#### GET /
+Returns a welcome message.
 
-## Installation
+#### GET /health
+Health check endpoint.
+
+#### POST /upload
+Upload a file to the server.
+
+#### GET /files
+List all uploaded files.
+
+## Running the Application
 
 ```bash
 pip install -r requirements.txt
-```
-
-## Usage
-
-```bash
 uvicorn main:app --reload
 ```
 
-## API Endpoints
+## Testing
 
-- GET / - Home page
-- POST /upload - Upload file
-- GET /files - List files
+```bash
+curl -X GET http://localhost:8000/
+curl -X POST -F "file=@file.txt" http://localhost:8000/upload
+```
