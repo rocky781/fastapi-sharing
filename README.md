@@ -1,31 +1,22 @@
-# FastAPI Sharing
+# FastAPI File Sharing
 
-## API Documentation
+FastAPI application for file sharing with upload and list endpoints.
 
-### Endpoints
-
-#### GET /
-Returns a welcome message.
-
-#### GET /health
-Health check endpoint.
-
-#### POST /upload
-Upload a file to the server.
-
-#### GET /files
-List all uploaded files.
-
-## Running the Application
+## Quick Start
 
 ```bash
 pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-## Testing
+## API Documentation
 
-```bash
-curl -X GET http://localhost:8000/
-curl -X POST -F "file=@file.txt" http://localhost:8000/upload
-```
+Visit http://localhost:8000/docs for interactive API docs.
+
+## Endpoints
+
+- GET / - Welcome message
+- GET /health - Health check
+- GET /info - App info
+- POST /upload - Upload file
+- GET /files - List files
