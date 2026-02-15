@@ -1,0 +1,7 @@
+[tool.fastapi]
+title = "FastAPI Sharing"
+version = "1.0.0"
+description = "File sharing API"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
